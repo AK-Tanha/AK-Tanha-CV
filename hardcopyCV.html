@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abul Khair (Tanha) - Premium Resume</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --navy:#0f172a;
+      --blue:#2563eb;
+      --blue-light:#dbeafe;
+      --text:#1e293b;
+      --muted:#64748b;
+      --line:#e2e8f0;
+      --bg:#f1f5f9;
+    }
+
+    *{margin:0;padding:0;box-sizing:border-box}
+
+    body{
+      font-family:"Poppins",sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      padding:28px;
+    }
+
+    .page{
+      width:210mm;
+      min-height:297mm;
+      margin:0 auto;
+      background:#fff;
+      border-radius:22px;
+      overflow:hidden;
+      box-shadow:0 20px 60px rgba(15,23,42,.15);
+    }
+
+    .top{
+      background:linear-gradient(135deg,#0f172a,#1e3a8a);
+      color:#fff;
+      padding:32px 36px 28px;
+      position:relative;
+    }
+
+    .top::after{
+      content:"";
+      position:absolute;
+      right:-60px;
+      top:-60px;
+      width:180px;
+      height:180px;
+      background:rgba(255,255,255,.08);
+      border-radius:50%;
+    }
+
+    .name{
+      font-size:34px;
+      font-weight:800;
+      letter-spacing:.5px;
+      line-height:1.05;
+    }
+
+    .role{
+      margin-top:6px;
+      font-size:14px;
+      font-weight:500;
+      opacity:.95;
+    }
+
+    .contact{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:8px 18px;
+      font-size:11px;
+    }
+
+    .contact a{
+      color:#fff;
+      text-decoration:none;
+    }
+
+    .body{
+      display:grid;
+      grid-template-columns:34% 66%;
+      min-height:calc(297mm - 120px);
+    }
+
+    .left{
+      background:#f8fafc;
+      border-right:1px solid var(--line);
+      padding:26px 22px 28px;
+    }
+
+    .right{
+      padding:26px 28px 28px;
+    }
+
+    .section{
+      margin-bottom:20px;
+    }
+
+    .section-title{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-size:13px;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      color:var(--navy);
+      margin-bottom:10px;
+    }
+
+    .section-title::before{
+      content:"";
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      background:var(--blue);
+      flex:none;
+    }
+
+    .summary{
+      font-size:11px;
+      line-height:1.7;
+      color:var(--text);
+      text-align:justify;
+    }
+
+    .chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+
+    .chip{
+      font-size:10px;
+      padding:6px 10px;
+      border-radius:999px;
+      background:var(--blue-light);
+      color:#1d4ed8;
+      font-weight:600;
+      border:1px solid #bfdbfe;
+    }
+
+    .skill-group{
+      margin-bottom:10px;
+    }
+
+    .skill-group h4{
+      font-size:11px;
+      margin-bottom:6px;
+      color:var(--navy);
+    }
+
+    .skill-group p{
+      font-size:10px;
+      line-height:1.6;
+      color:var(--muted);
+    }
+
+    .edu-card{
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:12px;
+      margin-bottom:10px;
+      background:#fff;
+    }
+
+    .edu-card h4{
+      font-size:11px;
+      color:var(--navy);
+      margin-bottom:3px;
+    }
+
+    .edu-card p{
+      font-size:10px;
+      color:var(--muted);
+      line-height:1.5;
+    }
+
+    .cert{
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:12px;
+      background:#fff;
+    }
+
+    .cert h4{
+      font-size:11px;
+      margin-bottom:4px;
+      color:var(--navy);
+    }
+
+    .cert p{
+      font-size:10px;
+      color:var(--muted);
+      margin-bottom:6px;
+    }
+
+    .cert a{
+      font-size:10px;
+      color:var(--blue);
+      text-decoration:none;
+      font-weight:700;
+    }
+
+    .exp{
+      position:relative;
+      padding-left:18px;
+      margin-bottom:18px;
+    }
+
+    .exp::before{
+      content:"";
+      position:absolute;
+      left:3px;
+      top:4px;
+      width:8px;
+      height:8px;
+      border-radius:50%;
+      background:var(--blue);
+    }
+
+    .exp::after{
+      content:"";
+      position:absolute;
+      left:6px;
+      top:14px;
+      bottom:-16px;
+      width:2px;
+      background:#dbeafe;
+    }
+
+    .exp:last-child::after{display:none}
+
+    .exp-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:12px;
+      margin-bottom:4px;
+    }
+
+    .exp h3{
+      font-size:13px;
+      color:var(--navy);
+    }
+
+    .exp .company{
+      font-size:11px;
+      color:var(--muted);
+      font-weight:500;
+    }
+
+    .exp .date{
+      font-size:10px;
+      color:var(--muted);
+      font-weight:600;
+      white-space:nowrap;
+    }
+
+    .exp ul{
+      margin-left:16px;
+      margin-top:6px;
+    }
+
+    .exp li{
+      font-size:11px;
+      margin-bottom:4px;
+      line-height:1.5;
+    }
+
+    .project{
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:14px;
+      margin-bottom:12px;
+      background:#fff;
+      box-shadow:0 4px 14px rgba(15,23,42,.03);
+    }
+
+    .project-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:10px;
+      margin-bottom:6px;
+    }
+
+    .project h3{
+      font-size:12px;
+      color:var(--navy);
+      line-height:1.4;
+    }
+
+    .project .stack{
+      font-size:9px;
+      color:var(--blue);
+      font-weight:700;
+      text-align:right;
+      min-width:120px;
+    }
+
+    .project-links{
+      font-size:10px;
+      margin-bottom:8px;
+    }
+
+    .project-links a{
+      color:var(--blue);
+      text-decoration:none;
+      font-weight:600;
+    }
+
+    .project ul{
+      margin-left:16px;
+    }
+
+    .project li{
+      font-size:11px;
+      margin-bottom:4px;
+      line-height:1.5;
+    }
+
+    .footer{
+      margin-top:6px;
+      padding-top:10px;
+      border-top:1px dashed var(--line);
+      text-align:center;
+      font-size:10px;
+      color:var(--muted);
+    }
+
+    @page{
+      size:A4;
+      margin:8mm;
+    }
+
+    @media print{
+      body{
+        background:#fff;
+        padding:0;
+      }
+
+      .page{
+        width:100%;
+        min-height:auto;
+        margin:0;
+        border-radius:0;
+        box-shadow:none;
+      }
+
+      .project,
+      .edu-card,
+      .cert{
+        break-inside:avoid;
+      }
+
+      a{
+        text-decoration:none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <header class="top">
+      <div class="name">ABUL KHAIR<br>(TANHA)</div>
+      <div class="role">Junior Full Stack Developer • MERN Stack Developer</div>
+
+      <div class="contact">
+        <div>📧 <a href="mailto:aktanha75@gmail.com">aktanha75@gmail.com</a></div>
+        <div>📞 +880 18314 81235</div>
+        <div>📍 Narayanganj, Bangladesh</div>
+        <div>🌐 <a href="https://aktanha75.vercel.app">Portfolio</a></div>
+        <div>💻 <a href="https://github.com/AK-Tanha">GitHub</a></div>
+        <div>🔗 <a href="https://linkedin.com/in/ak-tanha-09b325212">LinkedIn</a></div>
+      </div>
+    </header>
+
+    <div class="body">
+
+      <aside class="left">
+
+        <section class="section">
+          <div class="section-title">Profile</div>
+          <p class="summary">
+            Passionate full stack developer with practical experience in modern web technologies.
+            Enjoy building responsive interfaces, scalable APIs, and polished user experiences
+            for real-world products.
+          </p>
+        </section>
+
+        <section class="section">
+          <div class="section-title">Highlights</div>
+          <div class="chips">
+            <span class="chip">React</span>
+            <span class="chip">Next.js</span>
+            <span class="chip">TypeScript</span>
+            <span class="chip">Node.js</span>
+            <span class="chip">Express</span>
+            <span class="chip">MongoDB</span>
+            <span class="chip">FastAPI</span>
+            <span class="chip">PostgreSQL</span>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-title">Skills</div>
+
+          <div class="skill-group">
+            <h4>Frontend</h4>
+            <p>React.js, Next.js, TypeScript, JavaScript, Tailwind CSS, Bootstrap</p>
+          </div>
+
+          <div class="skill-group">
+            <h4>Backend</h4>
+            <p>Node.js, Express.js, Nest.js, FastAPI, REST APIs</p>
+          </div>
+
+          <div class="skill-group">
+            <h4>Database</h4>
+            <p>MongoDB, PostgreSQL, Supabase</p>
+          </div>
+
+          <div class="skill-group">
+            <h4>Tools</h4>
+            <p>Git, Postman, TanStack Query, Redux</p>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-title">Education</div>
+
+          <div class="edu-card">
+            <h4>M.Sc. in Physics</h4>
+            <p>National University</p>
+            <p>2017 • CGPA 3.11</p>
+          </div>
+
+          <div class="edu-card">
+            <h4>B.Sc. in Physics</h4>
+            <p>National University</p>
+            <p>2015 • CGPA 3.00</p>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-title">Certification</div>
+
+          <div class="cert">
+            <h4>MERN Full Stack Development</h4>
+            <p>Ostad • Batch 8</p>
+            <a href="https://ostad.app/share/certificate/c26948-abul-khair">View Certificate</a>
+          </div>
+        </section>
+
+      </aside>
+
+      <main class="right">
+
+        <section class="section">
+          <div class="section-title">Experience</div>
+
+          <div class="exp">
+            <div class="exp-head">
+              <div>
+                <h3>Junior Software Developer</h3>
+                <div class="company">Enterprise SaaS Products • POS & ERP</div>
+              </div>
+              <div class="date">Aug 2025 – Present</div>
+            </div>
+
+            <ul>
+              <li>Contributed to zBook POS and Education ERP enterprise SaaS platforms.</li>
+              <li>Developed and maintained 15+ features using React.js, Next.js, TypeScript, and JavaScript.</li>
+              <li>Built responsive interfaces and integrated REST APIs with backend services.</li>
+              <li>Resolved 50+ bugs and performance issues, improving product stability and user experience.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-title">Featured Projects</div>
+
+          <div class="project">
+            <div class="project-head">
+              <h3>CFC – MMA Event & Fighter Management System</h3>
+              <div class="stack">Next.js • TS • FastAPI</div>
+            </div>
+
+            <div class="project-links">
+              <a href="https://cage-fighting-championship.vercel.app/">Live</a> |
+              <a href="https://github.com/AK-Tanha/Cage-Fighting-Championship">GitHub</a>
+            </div>
+
+            <ul>
+              <li>Built event, fight-card, and fighter management modules with admin dashboard.</li>
+              <li>Implemented responsive UI, SEO optimization, and media management features.</li>
+            </ul>
+          </div>
+
+          <div class="project">
+            <div class="project-head">
+              <h3>Combat Corner BD – Full Stack Sports News Portal</h3>
+              <div class="stack">React • Redux • MongoDB</div>
+            </div>
+
+            <div class="project-links">
+              <a href="https://combatcornerbd.vercel.app/">Live</a> |
+              <a href="https://github.com/AK-Tanha/Full-Stack-Blog-Site">GitHub</a>
+            </div>
+
+            <ul>
+              <li>Developed article publishing system with authentication and engagement features.</li>
+              <li>Implemented Redux-based state management and responsive news interface.</li>
+            </ul>
+          </div>
+
+          <div class="project">
+            <div class="project-head">
+              <h3>Burak Mart E-commerce</h3>
+              <div class="stack">Next.js • TanStack Query</div>
+            </div>
+
+            <div class="project-links">
+              <a href="https://burak-mart.vercel.app/">Live</a> |
+              <a href="https://github.com/AK-Tanha/Burak-Mart">GitHub</a>
+            </div>
+
+            <ul>
+              <li>Created modern e-commerce frontend with cart and checkout UI.</li>
+              <li>Built admin dashboard for product and order management.</li>
+            </ul>
+          </div>
+        </section>
+
+        <div class="footer">
+          Available for Frontend, React, Next.js & Full Stack Developer opportunities
+        </div>
+
+      </main>
+    </div>
+  </div>
+</body>
+</html>
