@@ -1,553 +1,815 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abul Khair (Tanha) - Premium Resume</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abul Khair (Tanha) - Resume</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <style>
-    :root{
-      --navy:#0f172a;
-      --blue:#2563eb;
-      --blue-light:#dbeafe;
-      --text:#1e293b;
-      --muted:#64748b;
-      --line:#e2e8f0;
-      --bg:#f1f5f9;
-    }
-
-    *{margin:0;padding:0;box-sizing:border-box}
-
-    body{
-      font-family:"Poppins",sans-serif;
-      background:var(--bg);
-      color:var(--text);
-      padding:28px;
-    }
-
-    .page{
-      width:210mm;
-      min-height:297mm;
-      margin:0 auto;
-      background:#fff;
-      border-radius:22px;
-      overflow:hidden;
-      box-shadow:0 20px 60px rgba(15,23,42,.15);
-    }
-
-    .top{
-      background:linear-gradient(135deg,#0f172a,#1e3a8a);
-      color:#fff;
-      padding:32px 36px 28px;
-      position:relative;
-    }
-
-    .top::after{
-      content:"";
-      position:absolute;
-      right:-60px;
-      top:-60px;
-      width:180px;
-      height:180px;
-      background:rgba(255,255,255,.08);
-      border-radius:50%;
-    }
-
-    .name{
-      font-size:34px;
-      font-weight:800;
-      letter-spacing:.5px;
-      line-height:1.05;
-    }
-
-    .role{
-      margin-top:6px;
-      font-size:14px;
-      font-weight:500;
-      opacity:.95;
-    }
-
-    .contact{
-      margin-top:18px;
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:8px 18px;
-      font-size:11px;
-    }
-
-    .contact a{
-      color:#fff;
-      text-decoration:none;
-    }
-
-    .body{
-      display:grid;
-      grid-template-columns:34% 66%;
-      min-height:calc(297mm - 120px);
-    }
-
-    .left{
-      background:#f8fafc;
-      border-right:1px solid var(--line);
-      padding:26px 22px 28px;
-    }
-
-    .right{
-      padding:26px 28px 28px;
-    }
-
-    .section{
-      margin-bottom:20px;
-    }
-
-    .section-title{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      font-size:13px;
-      font-weight:700;
-      text-transform:uppercase;
-      letter-spacing:.08em;
-      color:var(--navy);
-      margin-bottom:10px;
-    }
-
-    .section-title::before{
-      content:"";
-      width:10px;
-      height:10px;
-      border-radius:50%;
-      background:var(--blue);
-      flex:none;
-    }
-
-    .summary{
-      font-size:11px;
-      line-height:1.7;
-      color:var(--text);
-      text-align:justify;
-    }
-
-    .chips{
-      display:flex;
-      flex-wrap:wrap;
-      gap:8px;
-    }
-
-    .chip{
-      font-size:10px;
-      padding:6px 10px;
-      border-radius:999px;
-      background:var(--blue-light);
-      color:#1d4ed8;
-      font-weight:600;
-      border:1px solid #bfdbfe;
-    }
-
-    .skill-group{
-      margin-bottom:10px;
-    }
-
-    .skill-group h4{
-      font-size:11px;
-      margin-bottom:6px;
-      color:var(--navy);
-    }
-
-    .skill-group p{
-      font-size:10px;
-      line-height:1.6;
-      color:var(--muted);
-    }
-
-    .edu-card{
-      border:1px solid var(--line);
-      border-radius:14px;
-      padding:12px;
-      margin-bottom:10px;
-      background:#fff;
-    }
-
-    .edu-card h4{
-      font-size:11px;
-      color:var(--navy);
-      margin-bottom:3px;
-    }
-
-    .edu-card p{
-      font-size:10px;
-      color:var(--muted);
-      line-height:1.5;
-    }
-
-    .cert{
-      border:1px solid var(--line);
-      border-radius:14px;
-      padding:12px;
-      background:#fff;
-    }
-
-    .cert h4{
-      font-size:11px;
-      margin-bottom:4px;
-      color:var(--navy);
-    }
-
-    .cert p{
-      font-size:10px;
-      color:var(--muted);
-      margin-bottom:6px;
-    }
-
-    .cert a{
-      font-size:10px;
-      color:var(--blue);
-      text-decoration:none;
-      font-weight:700;
-    }
-
-    .exp{
-      position:relative;
-      padding-left:18px;
-      margin-bottom:18px;
-    }
-
-    .exp::before{
-      content:"";
-      position:absolute;
-      left:3px;
-      top:4px;
-      width:8px;
-      height:8px;
-      border-radius:50%;
-      background:var(--blue);
-    }
-
-    .exp::after{
-      content:"";
-      position:absolute;
-      left:6px;
-      top:14px;
-      bottom:-16px;
-      width:2px;
-      background:#dbeafe;
-    }
-
-    .exp:last-child::after{display:none}
-
-    .exp-head{
-      display:flex;
-      justify-content:space-between;
-      align-items:flex-start;
-      gap:12px;
-      margin-bottom:4px;
-    }
-
-    .exp h3{
-      font-size:13px;
-      color:var(--navy);
-    }
-
-    .exp .company{
-      font-size:11px;
-      color:var(--muted);
-      font-weight:500;
-    }
-
-    .exp .date{
-      font-size:10px;
-      color:var(--muted);
-      font-weight:600;
-      white-space:nowrap;
-    }
-
-    .exp ul{
-      margin-left:16px;
-      margin-top:6px;
-    }
-
-    .exp li{
-      font-size:11px;
-      margin-bottom:4px;
-      line-height:1.5;
-    }
-
-    .project{
-      border:1px solid var(--line);
-      border-radius:16px;
-      padding:14px;
-      margin-bottom:12px;
-      background:#fff;
-      box-shadow:0 4px 14px rgba(15,23,42,.03);
-    }
-
-    .project-head{
-      display:flex;
-      justify-content:space-between;
-      align-items:flex-start;
-      gap:10px;
-      margin-bottom:6px;
-    }
-
-    .project h3{
-      font-size:12px;
-      color:var(--navy);
-      line-height:1.4;
-    }
-
-    .project .stack{
-      font-size:9px;
-      color:var(--blue);
-      font-weight:700;
-      text-align:right;
-      min-width:120px;
-    }
-
-    .project-links{
-      font-size:10px;
-      margin-bottom:8px;
-    }
-
-    .project-links a{
-      color:var(--blue);
-      text-decoration:none;
-      font-weight:600;
-    }
-
-    .project ul{
-      margin-left:16px;
-    }
-
-    .project li{
-      font-size:11px;
-      margin-bottom:4px;
-      line-height:1.5;
-    }
-
-    .footer{
-      margin-top:6px;
-      padding-top:10px;
-      border-top:1px dashed var(--line);
-      text-align:center;
-      font-size:10px;
-      color:var(--muted);
-    }
-
-    @page{
-      size:A4;
-      margin:8mm;
-    }
-
-    @media print{
-      body{
-        background:#fff;
-        padding:0;
+    <style>
+      :root {
+        --navy: #0f172a;
+        --blue: #2563eb;
+        --blue-light: #dbeafe;
+        --text: #1e293b;
+        --muted: #64748b;
+        --line: #e2e8f0;
+        --bg: #f1f5f9;
       }
 
-      .page{
-        width:100%;
-        min-height:auto;
-        margin:0;
-        border-radius:0;
-        box-shadow:none;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
 
-      .project,
-      .edu-card,
-      .cert{
-        break-inside:avoid;
+      body {
+        font-family: "Poppins", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        padding: 20px;
       }
 
-      a{
-        text-decoration:none;
+      .page {
+        width: 210mm;
+        height: 297mm;
+        margin: 0 auto;
+        background: #fff;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 12px 40px rgba(15, 23, 42, 0.12);
       }
-    }
-  </style>
-</head>
-<body>
-  <div class="page">
 
-    <header class="top">
-      <div class="name">ABUL KHAIR<br>(TANHA)</div>
-      <div class="role">Junior Full Stack Developer • MERN Stack Developer</div>
+      /* ========== HEADER ========== */
+      .top {
+        background: linear-gradient(135deg, #0f172a, #1e3a8a);
+        color: #fff;
+        padding: 16px 36px 16px 48px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
 
-      <div class="contact">
-        <div>📧 <a href="mailto:aktanha75@gmail.com">aktanha75@gmail.com</a></div>
-        <div>📞 +880 18314 81235</div>
-        <div>📍 Narayanganj, Bangladesh</div>
-        <div>🌐 <a href="https://aktanha75.vercel.app">Portfolio</a></div>
-        <div>💻 <a href="https://github.com/AK-Tanha">GitHub</a></div>
-        <div>🔗 <a href="https://linkedin.com/in/ak-tanha-09b325212">LinkedIn</a></div>
-      </div>
-    </header>
+      .top::before {
+        content: "";
+        position: absolute;
+        right: -50px;
+        top: -60px;
+        width: 150px;
+        height: 150px;
+        background: rgba(255, 255, 255, 0.06);
+        border-radius: 50%;
+      }
 
-    <div class="body">
+      .top::after {
+        content: "";
+        position: absolute;
+        left: -40px;
+        bottom: -70px;
+        width: 130px;
+        height: 130px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 50%;
+      }
 
-      <aside class="left">
+      .top-left {
+        flex: 1;
+        min-width: 0;
+      }
 
-        <section class="section">
-          <div class="section-title">Profile</div>
-          <p class="summary">
-            Passionate full stack developer with practical experience in modern web technologies.
-            Enjoy building responsive interfaces, scalable APIs, and polished user experiences
-            for real-world products.
-          </p>
-        </section>
+      .name {
+        font-size: 26px;
+        font-weight: 800;
+        letter-spacing: 0.4px;
+        line-height: 1.1;
+      }
 
-        <section class="section">
-          <div class="section-title">Highlights</div>
-          <div class="chips">
-            <span class="chip">React</span>
-            <span class="chip">Next.js</span>
-            <span class="chip">TypeScript</span>
-            <span class="chip">Node.js</span>
-            <span class="chip">Express</span>
-            <span class="chip">MongoDB</span>
-            <span class="chip">FastAPI</span>
-            <span class="chip">PostgreSQL</span>
+      .role {
+        margin-top: 3px;
+        font-size: 12px;
+        font-weight: 500;
+        opacity: 0.95;
+      }
+
+      .meta {
+        margin-top: 7px;
+        font-size: 10.5px;
+        color: #cbd5e1;
+        line-height: 1.5;
+      }
+
+      .top-right {
+        display: flex;
+        gap: 10px;
+        flex: none;
+      }
+
+      .qr-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3px;
+        text-decoration: none;
+        width: 76px;
+        padding: 7px 4px 6px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 10px;
+      }
+
+      .qr-link img {
+        width: 52px;
+        height: 52px;
+        border: 2px solid #fff;
+        border-radius: 8px;
+        background: #fff;
+        padding: 3px;
+      }
+
+      .qr-link span {
+        font-size: 8px;
+        font-weight: 700;
+        color: #fff;
+        letter-spacing: 0.03em;
+      }
+
+      .qr-link .url {
+        font-size: 7.5px;
+        font-weight: 500;
+        color: #cbd5e1;
+        letter-spacing: 0;
+        word-break: break-all;
+        text-align: center;
+        width: 100%;
+        line-height: 1.25;
+        min-height: 19px;
+      }
+
+      .contact a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      /* ========== BODY ========== */
+      .body {
+        display: grid;
+        grid-template-columns: 33% 67%;
+      }
+
+      .left {
+        background: #f8fafc;
+        border-right: 1px solid var(--line);
+        padding: 18px 24px 20px;
+      }
+
+      .right {
+        padding: 18px 26px 20px;
+      }
+
+      .section {
+        margin-bottom: 14px;
+      }
+
+      .section-title {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 11.5px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        color: var(--navy);
+        margin-bottom: 7px;
+      }
+
+      .section-title::before {
+        content: "";
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: var(--blue);
+        flex: none;
+      }
+
+      /* ========== LEFT SIDE ========== */
+      .summary {
+        font-size: 10px;
+        line-height: 1.55;
+        color: var(--text);
+        text-align: justify;
+      }
+
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+      }
+
+      .chip {
+        font-size: 9px;
+        padding: 3px 7px;
+        border-radius: 999px;
+        background: var(--blue-light);
+        color: #1d4ed8;
+        font-weight: 600;
+        border: 1px solid #bfdbfe;
+      }
+
+      .skill-group {
+        margin-bottom: 6px;
+      }
+
+      .skill-group h4 {
+        font-size: 10px;
+        margin-bottom: 2px;
+        color: var(--navy);
+      }
+
+      .skill-group p {
+        font-size: 9.5px;
+        line-height: 1.45;
+        color: var(--muted);
+      }
+
+      .edu-card {
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 9px 12px;
+        margin-bottom: 7px;
+        background: #fff;
+      }
+
+      .edu-card h4 {
+        font-size: 10.5px;
+        color: var(--navy);
+        margin-bottom: 1px;
+      }
+
+      .edu-card p {
+        font-size: 9.5px;
+        color: var(--muted);
+        line-height: 1.4;
+      }
+
+      /* Certificate with QR */
+      .cert-box {
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 10px;
+        background: #fff;
+        text-align: center;
+      }
+
+      .cert-box h4 {
+        font-size: 10.5px;
+        color: var(--navy);
+        margin-bottom: 2px;
+      }
+
+      .cert-box p {
+        font-size: 9.5px;
+        color: var(--muted);
+        margin-bottom: 6px;
+      }
+
+      .cert-box img {
+        width: 70px;
+        height: 70px;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        padding: 3px;
+        background: #fff;
+        margin: 0 auto 4px;
+        display: block;
+      }
+
+      .cert-box .scan-text {
+        font-size: 9.5px;
+        color: var(--muted);
+        font-weight: 500;
+      }
+
+      /* ========== RIGHT SIDE ========== */
+      .exp {
+        position: relative;
+        padding-left: 16px;
+        margin-bottom: 8px;
+      }
+
+      .exp::before {
+        content: "";
+        position: absolute;
+        left: 2px;
+        top: 4px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--blue);
+      }
+
+      .exp::after {
+        content: "";
+        position: absolute;
+        left: 5px;
+        top: 14px;
+        bottom: -14px;
+        width: 2px;
+        background: #dbeafe;
+      }
+
+      .exp:last-child::after {
+        display: none;
+      }
+
+      .exp-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 3px;
+      }
+
+      .exp h3 {
+        font-size: 12px;
+        color: var(--navy);
+      }
+
+      .exp .company {
+        font-size: 10px;
+        color: var(--muted);
+        font-weight: 500;
+      }
+
+      .exp .date {
+        font-size: 9.5px;
+        color: var(--muted);
+        font-weight: 600;
+        white-space: nowrap;
+      }
+
+      .exp ul {
+        margin-left: 15px;
+        margin-top: 3px;
+      }
+
+      .exp li {
+        font-size: 10px;
+        margin-bottom: 1px;
+        line-height: 1.4;
+      }
+
+      /* ========== PROJECTS ========== */
+      .project {
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 9px 16px;
+        margin-bottom: 8px;
+        background: #fff;
+      }
+
+      .project-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 4px;
+      }
+
+      .project h3 {
+        font-size: 11.5px;
+        color: var(--navy);
+        line-height: 1.3;
+      }
+
+      .project .stack {
+        font-size: 9px;
+        color: var(--blue);
+        font-weight: 700;
+        white-space: nowrap;
+        text-align: right;
+      }
+
+      .project ul {
+        margin-left: 15px;
+        margin-bottom: 6px;
+      }
+
+      .project li {
+        font-size: 10px;
+        margin-bottom: 1px;
+        line-height: 1.4;
+      }
+
+      /* Bottom row - Perfect symmetry without badges */
+      .project-bottom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 18px;
+        margin-top: 4px;
+        padding-top: 5px;
+        border-top: 1px solid #f1f5f9;
+      }
+
+      .scan-label {
+        font-size: 9px;
+        font-weight: 600;
+        color: var(--muted);
+        letter-spacing: 0.03em;
+      }
+
+      .qr-pair {
+        display: flex;
+        gap: 14px;
+      }
+
+      .qr-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2px;
+      }
+
+      .qr-item img {
+        width: 52px;
+        height: 52px;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        background: #fff;
+        padding: 3px;
+      }
+
+      .qr-item span {
+        font-size: 8.5px;
+        font-weight: 600;
+        color: #475569;
+      }
+
+      /* Footer */
+      .footer {
+        margin-top: 5px;
+        padding-top: 6px;
+        border-top: 1px dashed var(--line);
+        text-align: center;
+        font-size: 9px;
+        color: var(--muted);
+      }
+
+      /* ========== PRINT ========== */
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      @media print {
+        body {
+          background: #fff;
+          padding: 0;
+        }
+
+        .page {
+          width: 100%;
+          height: auto;
+          margin: 0;
+          border-radius: 0;
+          box-shadow: none;
+        }
+
+        .top {
+          border-radius: 0;
+        }
+
+        .project,
+        .edu-card,
+        .cert-box {
+          break-inside: avoid;
+        }
+
+        a {
+          text-decoration: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page">
+      <!-- HEADER -->
+      <header class="top">
+        <div class="top-left">
+          <div class="name">ABUL KHAIR<br />(TANHA)</div>
+          <div class="role">
+            Junior Full Stack Developer • MERN Stack Developer
           </div>
-        </section>
-
-        <section class="section">
-          <div class="section-title">Skills</div>
-
-          <div class="skill-group">
-            <h4>Frontend</h4>
-            <p>React.js, Next.js, TypeScript, JavaScript, Tailwind CSS, Bootstrap</p>
+          <div class="meta">
+            📞 +880 18314 81235 &nbsp;•&nbsp; 📍 Narayanganj, Bangladesh
           </div>
-
-          <div class="skill-group">
-            <h4>Backend</h4>
-            <p>Node.js, Express.js, Nest.js, FastAPI, REST APIs</p>
-          </div>
-
-          <div class="skill-group">
-            <h4>Database</h4>
-            <p>MongoDB, PostgreSQL, Supabase</p>
-          </div>
-
-          <div class="skill-group">
-            <h4>Tools</h4>
-            <p>Git, Postman, TanStack Query, Redux</p>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="section-title">Education</div>
-
-          <div class="edu-card">
-            <h4>M.Sc. in Physics</h4>
-            <p>National University</p>
-            <p>2017 • CGPA 3.11</p>
-          </div>
-
-          <div class="edu-card">
-            <h4>B.Sc. in Physics</h4>
-            <p>National University</p>
-            <p>2015 • CGPA 3.00</p>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="section-title">Certification</div>
-
-          <div class="cert">
-            <h4>MERN Full Stack Development</h4>
-            <p>Ostad • Batch 8</p>
-            <a href="https://ostad.app/share/certificate/c26948-abul-khair">View Certificate</a>
-          </div>
-        </section>
-
-      </aside>
-
-      <main class="right">
-
-        <section class="section">
-          <div class="section-title">Experience</div>
-
-          <div class="exp">
-            <div class="exp-head">
-              <div>
-                <h3>Junior Software Developer</h3>
-                <div class="company">Enterprise SaaS Products • POS & ERP</div>
-              </div>
-              <div class="date">Aug 2025 – Present</div>
-            </div>
-
-            <ul>
-              <li>Contributed to zBook POS and Education ERP enterprise SaaS platforms.</li>
-              <li>Developed and maintained 15+ features using React.js, Next.js, TypeScript, and JavaScript.</li>
-              <li>Built responsive interfaces and integrated REST APIs with backend services.</li>
-              <li>Resolved 50+ bugs and performance issues, improving product stability and user experience.</li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="section-title">Featured Projects</div>
-
-          <div class="project">
-            <div class="project-head">
-              <h3>CFC – MMA Event & Fighter Management System</h3>
-              <div class="stack">Next.js • TS • FastAPI</div>
-            </div>
-
-            <div class="project-links">
-              <a href="https://cage-fighting-championship.vercel.app/">Live</a> |
-              <a href="https://github.com/AK-Tanha/Cage-Fighting-Championship">GitHub</a>
-            </div>
-
-            <ul>
-              <li>Built event, fight-card, and fighter management modules with admin dashboard.</li>
-              <li>Implemented responsive UI, SEO optimization, and media management features.</li>
-            </ul>
-          </div>
-
-          <div class="project">
-            <div class="project-head">
-              <h3>Combat Corner BD – Full Stack Sports News Portal</h3>
-              <div class="stack">React • Redux • MongoDB</div>
-            </div>
-
-            <div class="project-links">
-              <a href="https://combatcornerbd.vercel.app/">Live</a> |
-              <a href="https://github.com/AK-Tanha/Full-Stack-Blog-Site">GitHub</a>
-            </div>
-
-            <ul>
-              <li>Developed article publishing system with authentication and engagement features.</li>
-              <li>Implemented Redux-based state management and responsive news interface.</li>
-            </ul>
-          </div>
-
-          <div class="project">
-            <div class="project-head">
-              <h3>Burak Mart E-commerce</h3>
-              <div class="stack">Next.js • TanStack Query</div>
-            </div>
-
-            <div class="project-links">
-              <a href="https://burak-mart.vercel.app/">Live</a> |
-              <a href="https://github.com/AK-Tanha/Burak-Mart">GitHub</a>
-            </div>
-
-            <ul>
-              <li>Created modern e-commerce frontend with cart and checkout UI.</li>
-              <li>Built admin dashboard for product and order management.</li>
-            </ul>
-          </div>
-        </section>
-
-        <div class="footer">
-          Available for Frontend, React, Next.js & Full Stack Developer opportunities
         </div>
 
-      </main>
+        <div class="top-right">
+          <a class="qr-link" href="mailto:aktanha75@gmail.com">
+            <img
+              src="https://api.qrserver.com/v1/create-qr-code/?size=58x58&data=mailto%3Aaktanha75%40gmail.com"
+              alt="Email QR"
+            />
+            <span>Email</span>
+            <span class="url">aktanha75@gmail.com</span>
+          </a>
+          <a class="qr-link" href="https://aktanha75.vercel.app">
+            <img
+              src="https://api.qrserver.com/v1/create-qr-code/?size=58x58&data=https%3A%2F%2Faktanha75.vercel.app"
+              alt="Portfolio QR"
+            />
+            <span>Portfolio</span>
+            <span class="url">aktanha75.vercel.app</span>
+          </a>
+          <a class="qr-link" href="https://github.com/AK-Tanha">
+            <img
+              src="https://api.qrserver.com/v1/create-qr-code/?size=58x58&data=https%3A%2F%2Fgithub.com%2FAK-Tanha"
+              alt="GitHub QR"
+            />
+            <span>GitHub</span>
+            <span class="url">github.com/AK-Tanha</span>
+          </a>
+          <a class="qr-link" href="https://linkedin.com/in/ak-tanha-09b325212">
+            <img
+              src="https://api.qrserver.com/v1/create-qr-code/?size=58x58&data=https%3A%2F%2Flinkedin.com%2Fin%2Fak-tanha-09b325212"
+              alt="LinkedIn QR"
+            />
+            <span>LinkedIn</span>
+            <span class="url">linkedin.com/in/ak-tanha-09b325212</span>
+          </a>
+        </div>
+      </header>
+
+      <div class="body">
+        <!-- LEFT SIDEBAR -->
+        <aside class="left">
+          <section class="section">
+            <div class="section-title">Profile</div>
+            <p class="summary">
+              Full Stack Developer with production experience in
+              <strong
+                >React, Next.js, TypeScript, Node.js, FastAPI, PostgreSQL,
+                MongoDB, and Supabase</strong
+              >. I believe clients pay for
+              <strong>problem solving, not just code</strong>, so I focus on
+              understanding business needs and building scalable, reliable web
+              applications that improve real-world workflows.
+            </p>
+          </section>
+
+          <section class="section">
+            <div class="section-title">Highlights</div>
+            <div class="chips">
+              <span class="chip">React</span>
+              <span class="chip">Next.js</span>
+              <span class="chip">TypeScript</span>
+              <span class="chip">Node.js</span>
+              <span class="chip">Express</span>
+              <span class="chip">MongoDB</span>
+              <span class="chip">FastAPI</span>
+              <span class="chip">PostgreSQL</span>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="section-title">Skills</div>
+
+            <div class="skill-group">
+              <h4>Frontend</h4>
+              <p>
+                React.js, Next.js, TypeScript, JavaScript, Tailwind CSS,
+                Bootstrap
+              </p>
+            </div>
+
+            <div class="skill-group">
+              <h4>Backend</h4>
+              <p>Node.js, Express.js, Nest.js, FastAPI, REST APIs</p>
+            </div>
+
+            <div class="skill-group">
+              <h4>Database</h4>
+              <p>MongoDB, PostgreSQL, Supabase</p>
+            </div>
+
+            <div class="skill-group">
+              <h4>Tools</h4>
+              <p>Git, Postman, TanStack Query, Redux</p>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="section-title">Education</div>
+
+            <div class="edu-card">
+              <h4>M.Sc. in Physics</h4>
+              <p>National University</p>
+              <p>2017 • CGPA 3.11</p>
+            </div>
+
+            <div class="edu-card">
+              <h4>B.Sc. in Physics</h4>
+              <p>National University</p>
+              <p>2015 • CGPA 3.00</p>
+            </div>
+          </section>
+
+          <!-- CERTIFICATE -->
+          <section class="section">
+            <div class="section-title">Certification</div>
+            <div class="cert-box">
+              <h4>MERN Full Stack Development</h4>
+              <p>Ostad • Batch 8</p>
+              <img
+                src="https://api.qrserver.com/v1/create-qr-code/?size=92x92&data=https://ostad.app/share/certificate/c26948-abul-khair"
+                alt="Certificate QR"
+              />
+              <div class="scan-text">Scan to verify</div>
+            </div>
+          </section>
+        </aside>
+
+        <!-- RIGHT CONTENT -->
+        <main class="right">
+          <section class="section">
+            <div class="section-title">Experience</div>
+
+            <div class="exp">
+              <div class="exp-head">
+                <div>
+                  <h3>Junior Software Developer</h3>
+                  <div class="company">
+                    B9zero • Multi-Product SaaS Ecosystem
+                  </div>
+                </div>
+                <div class="date">Aug 2025 – Present</div>
+              </div>
+
+              <ul>
+                <li>
+                  Contributed to multiple production applications including
+                  <strong
+                    >zBook POS, zBook ERP, Education ERP, Edazent, EduLife
+                    Career, Ed Uni, and Unicas</strong
+                  >.
+                </li>
+
+                <li>
+                  Worked across ERP, POS, education, CRM, and operational
+                  management modules depending on product requirements.
+                </li>
+
+                <li>
+                  Developed and updated frontend features using
+                  <strong>React, Next.js, TypeScript, and JavaScript</strong>.
+                </li>
+
+                <li>
+                  Integrated frontend components with
+                  <strong>REST APIs</strong> and handled forms, validation,
+                  dashboards, tables, and data-driven workflows.
+                </li>
+
+                <li>
+                  Participated in feature enhancement, bug fixing, testing, and
+                  release support across several active products.
+                </li>
+
+                <li>
+                  Collaborated with senior developers, QA engineers, and product
+                  stakeholders in day-to-day development activities.
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="section-title">Featured Projects</div>
+
+            <!-- PROJECT 1 -->
+            <div class="project">
+              <div class="project-head">
+                <h3>CFC – MMA Event & Fighter Management System</h3>
+                <div class="stack">Next.js • TS • FastAPI</div>
+              </div>
+              <ul>
+                <li>
+                  Built event, fight-card, and fighter management modules with
+                  admin dashboard.
+                </li>
+                <li>
+                  Implemented responsive UI, SEO optimization, and media
+                  management features.
+                </li>
+              </ul>
+              <div class="project-bottom">
+                <div class="scan-label">Scan to open</div>
+                <div class="qr-pair">
+                  <div class="qr-item">
+                    <img
+                      src="https://api.qrserver.com/v1/create-qr-code/?size=64x64&data=https://cage-fighting-championship.vercel.app/"
+                      alt="Demo QR"
+                    />
+                    <span>Demo</span>
+                  </div>
+                  <div class="qr-item">
+                    <img
+                      src="https://api.qrserver.com/v1/create-qr-code/?size=64x64&data=https://github.com/AK-Tanha/Cage-Fighting-Championship"
+                      alt="GitHub QR"
+                    />
+                    <span>GitHub</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PROJECT 2 -->
+            <div class="project">
+              <div class="project-head">
+                <h3>Combat Corner BD – Full Stack Sports News Portal</h3>
+                <div class="stack">React • Redux • MongoDB</div>
+              </div>
+              <ul>
+                <li>
+                  Developed article publishing system with authentication and
+                  engagement features.
+                </li>
+                <li>
+                  Implemented Redux-based state management and responsive news
+                  interface.
+                </li>
+              </ul>
+              <div class="project-bottom">
+                <div class="scan-label">Scan to open</div>
+                <div class="qr-pair">
+                  <div class="qr-item">
+                    <img
+                      src="https://api.qrserver.com/v1/create-qr-code/?size=64x64&data=https://combatcornerbd.vercel.app/"
+                      alt="Demo QR"
+                    />
+                    <span>Demo</span>
+                  </div>
+                  <div class="qr-item">
+                    <img
+                      src="https://api.qrserver.com/v1/create-qr-code/?size=64x64&data=https://github.com/AK-Tanha/Full-Stack-Blog-Site"
+                      alt="GitHub QR"
+                    />
+                    <span>GitHub</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PROJECT 3 -->
+            <div class="project">
+              <div class="project-head">
+                <h3>Burak Mart E-commerce</h3>
+                <div class="stack">Next.js • TanStack Query</div>
+              </div>
+              <ul>
+                <li>
+                  Created modern e-commerce frontend with cart and checkout UI.
+                </li>
+                <li>Built admin dashboard for product and order management.</li>
+              </ul>
+              <div class="project-bottom">
+                <div class="scan-label">Scan to open</div>
+                <div class="qr-pair">
+                  <div class="qr-item">
+                    <img
+                      src="https://api.qrserver.com/v1/create-qr-code/?size=64x64&data=https://burak-mart.vercel.app/"
+                      alt="Demo QR"
+                    />
+                    <span>Demo</span>
+                  </div>
+                  <div class="qr-item">
+                    <img
+                      src="https://api.qrserver.com/v1/create-qr-code/?size=64x64&data=https://github.com/AK-Tanha/Burak-Mart"
+                      alt="GitHub QR"
+                    />
+                    <span>GitHub</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="footer">
+            Available for Frontend, React, Next.js & Full Stack Developer
+            opportunities
+          </div>
+        </main>
+      </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>
