@@ -23,8 +23,10 @@
       padding:48px 20px;
     }
     .wrap{width:100%;max-width:960px;text-align:center}
-    .eyebrow{font-family:'Inter',system-ui,sans-serif;font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:#2563eb;margin-bottom:18px}
-    h1{font-size:clamp(2.4rem,6vw,3.8rem);font-weight:600;letter-spacing:-.02em;line-height:1.05;color:#0f172a}
+    .hero{display:flex;align-items:center;justify-content:center;gap:40px;text-align:left}
+    .avatar{width:280px;height:auto;border-radius:16px;object-fit:cover;border:5px solid #ffffff;box-shadow:0 12px 32px rgba(15,23,42,.18);flex-shrink:0}
+    .hero-text .eyebrow{font-family:'Inter',system-ui,sans-serif;font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:#2563eb;margin-bottom:12px}
+    .hero-text h1{font-size:clamp(2.4rem,6vw,3.8rem);font-weight:600;letter-spacing:-.02em;line-height:1.05;color:#0f172a}
     .role{font-size:1.05rem;color:#64748b;margin-top:10px}
     .role strong{color:#334155;font-weight:600}
     .divider{width:64px;height:3px;border-radius:2px;background:linear-gradient(90deg,#2563eb,#6366f1);margin:28px auto 44px}
@@ -62,14 +64,19 @@
     .foot{margin-top:44px;font-size:13.5px;color:#94a3b8}
     .foot a{color:#64748b;text-decoration:none;border-bottom:1px solid rgba(100,116,139,.3);transition:color .2s,border-color .2s}
     .foot a:hover{color:#2563eb;border-color:#2563eb}
-    @media(max-width:820px){.grid{grid-template-columns:1fr}}
+    @media(max-width:820px){.grid{grid-template-columns:1fr}.hero{flex-direction:column;text-align:center}}
   </style>
 </head>
 <body>
   <div class="wrap">
-    <div class="eyebrow">Resume Collection</div>
-    <h1>Abul Khair <span style="color:#2563eb">(Tanha)</span></h1>
-    <p class="role"><strong>Developer</strong> · NestJS / Node.js / React / Next.js</p>
+    <div class="hero">
+      <img class="avatar" src="6dt33.jpg" alt="Abul Khair (Tanha)">
+      <div class="hero-text">
+        <div class="eyebrow">Resume Collection</div>
+        <h1>Abul Khair <span style="color:#2563eb">(Tanha)</span></h1>
+        <p class="role"><strong>Developer</strong> · NestJS / Node.js / React / Next.js</p>
+      </div>
+    </div>
     <div class="divider"></div>
 
     <div class="grid">
