@@ -9,7 +9,6 @@
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
-    html,body{height:100%}
     body{
       font-family:'EB Garamond','Times New Roman',serif;
       background:radial-gradient(ellipse 80% 50% at 50% -20%, rgba(37,99,235,.08), transparent 60%),
@@ -18,11 +17,11 @@
       color:#334155;
       min-height:100vh;
       display:flex;
-      align-items:center;
       justify-content:center;
       padding:48px 20px;
     }
-    .wrap{width:100%;max-width:960px;text-align:center}
+    /* margin:auto centers vertically but stays scrollable when content is taller than the viewport */
+    .wrap{width:100%;max-width:960px;text-align:center;margin:auto}
     .hero{display:flex;align-items:center;justify-content:center;gap:40px;text-align:left;margin-top:40px}
     .avatar{width:280px;height:auto;border-radius:16px;object-fit:cover;border:5px solid #ffffff;box-shadow:0 12px 32px rgba(15,23,42,.18);flex-shrink:0}
     .hero-text .eyebrow{font-family:'Inter',system-ui,sans-serif;font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:#2563eb;margin-bottom:12px}
@@ -30,7 +29,9 @@
     .role{font-size:1.05rem;color:#64748b;margin-top:10px}
     .role strong{color:#334155;font-weight:600}
     .divider{width:64px;height:3px;border-radius:2px;background:linear-gradient(90deg,#2563eb,#6366f1);margin:28px auto 44px}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px}
+    /* With 5 cards the last row would leave a gap — let the final card span the remainder */
+    @media(min-width:821px){.grid .card:last-child{grid-column:span 2}}
     .card{
       position:relative;
       display:flex;flex-direction:column;
@@ -114,6 +115,32 @@
           <span class="tag">A4-ready</span>
         </div>
         <p class="desc">A clean, print-friendly resume formatted for paper or PDF distribution.</p>
+        <span class="cta">View CV <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </a>
+
+      <a class="card" href="teacher%20cv.html">
+        <div class="num">04</div>
+        <h2>Teacher CV</h2>
+        <div class="tags">
+          <span class="tag">Physics</span>
+          <span class="tag">Chemistry</span>
+          <span class="tag">Mathematics</span>
+          <span class="tag">Lesson Planning</span>
+        </div>
+        <p class="desc">Classroom teaching for Physics, Chemistry &amp; Math with board and admission test preparation.</p>
+        <span class="cta">View CV <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </a>
+
+      <a class="card" href="solar_pv_technical_sales_cv.html">
+        <div class="num">05</div>
+        <h2>Solar PV Technical Sales CV</h2>
+        <div class="tags">
+          <span class="tag">Solar PV</span>
+          <span class="tag">Renewable Energy</span>
+          <span class="tag">Business Development</span>
+          <span class="tag">Communication</span>
+        </div>
+        <p class="desc">MSc Physics graduate targeting technical business development roles in solar PV systems.</p>
         <span class="cta">View CV <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </a>
     </div>
